@@ -30,6 +30,12 @@ function Addemp() {
           console.log(Addemp)
           // window.location.reload(false)
           alert("Data Added Successfuly") 
+          setAddemp({ name:"",
+            email:"",
+            job:"",
+            phone:"",
+            age:""
+        })
           // navigate("/")
         }
         useEffect(() => {
@@ -41,11 +47,11 @@ function Addemp() {
         <form onSubmit={onsubmitt}>
             <div className="head_reg d-flex justify-content-center"><span className='head_reg'>Add Employee</span></div>
             <div className="input_boxs_main_div">
-                <div className="input_box_div"><input type='text' name='name' placeholder="Name :" className="input_box_reg" onChange={onchangesubmitt} required/></div>
-                <div className="input_box_div"><input type='text' name='email' placeholder='Email :' className="input_box_reg" onChange={onchangesubmitt} required/></div>
-                <div className="input_box_div"><input type='text' name='job' placeholder='Job Title :' className="input_box_reg" onChange={onchangesubmitt} required/></div>
-                <div className="input_box_div"><input type='text' name='phone' placeholder='Phone no :' className="input_box_reg" onChange={onchangesubmitt} required/></div>
-                <div className="input_box_div"><input type='text' name='age' placeholder='Age:' className="input_box_reg" onChange={onchangesubmitt} required/></div>
+                <div className="input_box_div"><input type='text' name='name'value={Addemp.name} placeholder="Name :" className="input_box_reg" onChange={onchangesubmitt} required/></div>
+                <div className="input_box_div"><input type='text' name='email'value={Addemp.email} placeholder='Email :' className="input_box_reg" onChange={onchangesubmitt} required/></div>
+                <div className="input_box_div"><input type='text' name='job'value={Addemp.job} placeholder='Job Title :' className="input_box_reg" onChange={onchangesubmitt} required/></div>
+                <div className="input_box_div"><input type='text' name='phone'value={Addemp.phone} placeholder='Phone no :' className="input_box_reg" onChange={onchangesubmitt} required/></div>
+                <div className="input_box_div"><input type='text' name='age'value={Addemp.age} placeholder='Age:' className="input_box_reg" onChange={onchangesubmitt} required/></div>
                 <div className="input_button_div"><input type='submit' value="Submit" className='submit_reg bg-primary text-white'/></div>
                 {/* <Link to="/">Login</Link> */}
             </div>
