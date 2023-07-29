@@ -1,0 +1,134 @@
+/* emp page */
+
+.main{
+  /* background-color: #e0fffd; */
+}
+.head_main{
+  font-family: 'Merienda', cursive;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.emp_main_div{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  
+}
+
+#subcolspecial{
+  font-weight: bold;
+}
+.table_main_div{
+  background-color: antiquewhite;
+  width: 100%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 5px;
+}
+.sub_col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  padding: 5px;
+  border-radius: 2px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.searchbar{
+  border-radius: 50px;
+  padding-left: 15px;
+  border: none;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+.searchbar::placeholder{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.search_div{
+  padding: 5px;
+}
+.ADD_PHOTO{
+  position: absolute;
+  display: flex;
+    
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background:none;
+    padding: 5px;
+
+    margin-bottom: 10px;
+    text-decoration: none;
+    border: 1px solid blue;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 15px;
+}
+
+
+/* @media (max-width: 950px) {
+  .table_main_div {
+    grid-template-columns:1fr 3fr 1fr 1fr;
+  }
+} */
+
+
+/* page not found */
+/* src/components/NotFoundPage.css */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.not-found-text {
+  font-size: 6rem;
+  font-weight: bold;
+  animation: shake 0.5s infinite;
+}
+
+.not-found-message {
+  font-size: 1.5rem;
+}
+
+/* @keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+} */
+@keyframes shake {
+  0%, 100% {
+    color: black;
+    background-color: transparent;
+  }
+  50% {
+    padding-left: 5px;
+    padding-right: 5px;
+    color:  red;
+  }
+}
+
+.red-alert {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  animation: redAlert 2s infinite;
+}
+
