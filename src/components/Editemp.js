@@ -56,24 +56,24 @@ const onchangehandle=(a)=>{
       <form className="container main_contain_usepro shadow-lg p-0" onSubmit={submitt}>
         <div className="col-5 main_col_profile">
           <img src={profileicon} className='profile_icon_user' alt='Add profile picture' />
-          <div className=""><input type='text' name='name' value={Addemp.name}  className="input_box_prof" onChange={onchangehandle} /></div>
+          <div className=""><input type='text' name='name' value={Addemp.name} pattern="[A-Za-z\s]+" title='Only Alphabet'  className="input_box_prof" onChange={onchangehandle} /></div>
         </div>
         <div className="col main_col_profile">
             <div className="sub_main_input_div">
               <p className='m-0 text-red-500'>Email :</p>
-              <input type='text' name='email'  value={Addemp.email} className="input_box_prof" onChange={onchangehandle}/>
+              <input type='email' name='email'  value={Addemp.email} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" className="input_box_prof" onChange={onchangehandle}/>
               </div>
             <div className="sub_main_input_div">
               <p className='m-0'>Job Title :</p>
-              <input type='text' name='job' value={Addemp.job} className="input_box_prof"  onChange={onchangehandle}/>
+              <input type='text' name='job' value={Addemp.job} title='Only Alphabet' pattern="[A-Za-z\s]+" className="input_box_prof"  onChange={onchangehandle}/>
             </div>
             <div className="sub_main_input_div">
               <p className='m-0'>Phone no :</p>
-              <input type='text' name='phone' value={Addemp.phone} className="input_box_prof" onChange={onchangehandle}/>
+              <input type='text' name='phone' value={Addemp.phone}  title='Only Number must contain 10 digits' pattern="[0-9]{10}" className="input_box_prof" onChange={onchangehandle}/>
             </div>
             <div className="sub_main_input_div">
               <p className='m-0'>Age :</p>
-              <input type='text' name='age' value={Addemp.age} className="input_box_prof" onChange={onchangehandle}/>
+              <input type='text' name='age' value={Addemp.age} title='Only Number' pattern="[0-9]+" className="input_box_prof" onChange={onchangehandle}/>
             </div>
             <div className="sub_main_input_div">
               <input type='Submit' className='bg-primary text-white' value='Update'/>
